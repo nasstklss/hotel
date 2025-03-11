@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Статейка</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+<div id="app">
+  <header class="bg-primary text-white">
+    <div class="container d-flex justify-content-between py-2">
+      <a href="index.html" class="navbar-brand text-white">
+        <strong>HOTEL</strong>
+      </a>
+      <nav class="nav nav-pills">
+        <a href="index.html" class="nav-link text-white">Главная</a>
+        <a href="login.html" class="nav-link text-white">Вход</a>
+        <a href="login.html" class="nav-link text-white">Выход</a>
+      </nav>
+      <form class="d-flex my-2">
+        <div class="input-group ">
+          <input class="form-control " type="search" placeholder="Поиск заявки по коду"
+                 aria-label="Search">
+          <div class="input-group-append">
+            <a href="booking.html" class="btn btn-outline-light" type="submit">Найти</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </header>
+
+  <div class="container my-2">
+
+    <section class="py-5">
+      <div class="mb-4 d-flex justify-content-between align-items-center">
+        <h2>Управление заявками на бронирование</h2>
+<!--        <button class="btn btn-sm btn-success">Добавить статью</button>-->
+      </div>
+      <table class="table">
+        <tr>
+          <th>#</th>
+          <th>code</th>
+          <th>Дата и время</th>
+          <th>Статус</th>
+          <th>Дата заезда</th>
+          <th>Дата отъезда</th>
+          <th>Категория номера</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>h564kl7</td>
+          <td>09.02.2022 16:00</td>
+          <td>Ожидание</td>
+          <td>01.03.2022</td>
+          <td>12.03.2022</td>
+          <td>Двухместный номер</td>
+          <td>
+            <a href="booking.html" class="btn btn-primary btn-sm">Редактировать</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <hr>
+    <section class="py-5">
+      <div class="mb-4 d-flex justify-content-between align-items-center">
+        <h2>Управление менеджерами</h2>
+        <a href="addManager.html" class="btn btn-sm btn-success">Добавить менеджера</a>
+      </div>
+      <table class="table">
+        <tr>
+          <th>#</th>
+          <th>ФИО</th>
+          <th>login</th>
+          <th>Статус</th>
+          <th>Фото</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Иванов Иван Иванович</td>
+          <td>manager1</td>
+          <td>working</td>
+          <td><img src="assets/images/reviews-user-photo.jpg" class="img-thumbnail" width="100px"  alt=""></td>
+          <td>
+            <a href="#" class="btn btn-danger btn-sm">Уволить</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <hr>
+    <section class="py-5">
+      <div class="mb-4 d-flex justify-content-between align-items-center">
+        <h2>Управление прайсами</h2>
+        <a href="addPrice.html" class="btn btn-sm btn-success">Добавить прайс</a>
+      </div>
+      <table class="table">
+        <tr>
+          <th>#</th>
+          <th>code</th>
+          <th>Категория номера</th>
+          <th>Дата начала действия</th>
+          <th>Цена за номер в день</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>single-01-03-2022</td>
+          <td>Одноместный</td>
+          <td>01.03.2022</td>
+          <td>
+            <form class="d-flex d-inline-flex">
+              <input type="text" class="form-control" value="1000">
+              <a href="manage.html" class="btn btn-primary">
+                Сохранить
+              </a>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</div>
+</body>
+</html>

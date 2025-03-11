@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Заявка на бронирование номера</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+<div id="app">
+    <header class="bg-primary text-white">
+        <div class="container d-flex justify-content-between py-2">
+            <a href="index.html" class="navbar-brand text-white">
+                <strong>HOTEL</strong>
+            </a>
+            <nav class="nav nav-pills">
+                <a href="index.html" class="nav-link text-white">Главная</a>
+                <a href="login.html" class="nav-link text-white">Вход</a>
+                <a href="login.html" class="nav-link text-white">Выход</a>
+            </nav>
+            <form class="d-flex my-2">
+                <div class="input-group ">
+                    <input class="form-control " type="search" placeholder="Поиск заявки по коду"
+                           aria-label="Search">
+                    <div class="input-group-append">
+                        <a href="booking.html" class="btn btn-outline-light" type="submit">Найти</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <div class="container w-75 border bg-light mt-5">
+        <section class="p-5">
+            <div class="mb-4 d-flex justify-content-between align-items-center">
+                <h2>Заявка на бронирование номера</h2>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <!-- Заезд -->
+                        <div class="form-outline mb-2">
+                            <label class="form-label">Дата заезда</label>
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <!-- Заезд -->
+                        <div class="form-outline mb-2">
+                            <label class="form-label">Дата отъезда</label>
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-outline mb-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="assets/images/placeholder-blue.png"
+                                     alt="placeholder">
+                                <div class="card-img-overlay">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="badge bg-info mb-3">10000 руб</span>
+                                        <input type="radio" class="btn-check" name="category" id="category1"
+                                               autocomplete="off" checked>
+                                        <label  class="btn btn-outline-warning" for="category1">Выбрать</label>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <small class="text-muted">Code</small>
+                                    </p>
+                                    <h5 class="card-title">Название категории</h5>
+                                    <div class="d-flex flex-row mb-2" >
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-arrows-angle-expand text-primary" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"></path>
+                                            </svg>
+                                            <small> 12 кв.м </small>
+                                        </div>
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-layout-split text-primary" viewBox="0 0 16 16">
+                                                <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm8.5-1v12H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H8.5zm-1 0H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h5.5V2z"/>
+                                            </svg>
+                                            <small> 1 комн. </small>
+                                        </div>
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-people text-primary"
+                                                 viewBox="0 0 16 16">
+                                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                            </svg>
+                                            <small> до 2 мест. </small>
+                                        </div>
+                                    </div>
+                                    <div>Cвободных номеров: 5</div>
+                                    <a href="category.html" class="btn btn-link mt-3" style="position: relative;">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="assets/images/placeholder-blue.png"
+                                     alt="placeholder">
+                                <div class="card-img-overlay">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="badge bg-info mb-3">15000 руб</span>
+                                        <input type="radio" class="btn-check" name="category" id="category2"
+                                               autocomplete="off">
+                                        <label class="btn btn-outline-warning" for="category2">Выбрать</label>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <small class="text-muted">Code</small>
+                                    </p>
+                                    <h5 class="card-title">Название категории</h5>
+                                    <div class="d-flex flex-row mb-2" >
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-arrows-angle-expand text-primary" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"></path>
+                                            </svg>
+                                            <small> 12 кв.м </small>
+                                        </div>
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-layout-split text-primary" viewBox="0 0 16 16">
+                                                <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm8.5-1v12H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H8.5zm-1 0H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h5.5V2z"/>
+                                            </svg>
+                                            <small> 1 комн. </small>
+                                        </div>
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-people text-primary"
+                                                 viewBox="0 0 16 16">
+                                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                            </svg>
+                                            <small> до 2 мест. </small>
+                                        </div>
+                                    </div>
+                                    <div>Cвободных номеров: 5</div>
+
+                                    <a href="category.html" class="btn btn-link mt-3" style="position: relative;">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="assets/images/placeholder-blue.png"
+                                     alt="placeholder">
+                                <div class="card-img-overlay">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="badge bg-info mb-3">10000 руб</span>
+                                        <input type="radio" class="btn-check" name="category" id="category3"
+                                               autocomplete="off">
+                                        <label class="btn btn-outline-warning" for="category3">Выбрать</label>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <small class="text-muted">Code</small>
+                                    </p>
+                                    <h5 class="card-title">Название категории</h5>
+                                    <div class="d-flex flex-row mb-2" >
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-arrows-angle-expand text-primary" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"></path>
+                                            </svg>
+                                            <small> 12 кв.м </small>
+                                        </div>
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-layout-split text-primary" viewBox="0 0 16 16">
+                                                <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm8.5-1v12H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H8.5zm-1 0H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h5.5V2z"/>
+                                            </svg>
+                                            <small> 1 комн. </small>
+                                        </div>
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-people text-primary"
+                                                 viewBox="0 0 16 16">
+                                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                            </svg>
+                                            <small> до 2 мест. </small>
+                                        </div>
+                                    </div>
+                                    <div>Cвободных номеров: 5</div>
+
+                                    <a href="category.html" class="btn btn-link mt-3" style="position: relative;">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="assets/images/placeholder-blue.png"
+                                     alt="placeholder">
+                                <div class="card-img-overlay">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="badge bg-info mb-3">10000 руб</span>
+                                        <input type="radio" class="btn-check" name="category" id="category4"
+                                               autocomplete="off">
+                                        <label class="btn btn-outline-warning" for="category4">Выбрать</label>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <small class="text-muted">Code</small>
+                                    </p>
+                                    <h5 class="card-title">Название категории</h5>
+                                    <div class="d-flex flex-row mb-2" >
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-arrows-angle-expand text-primary" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"></path>
+                                            </svg>
+                                            <small> 12 кв.м </small>
+                                        </div>
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-layout-split text-primary" viewBox="0 0 16 16">
+                                                <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm8.5-1v12H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H8.5zm-1 0H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h5.5V2z"/>
+                                            </svg>
+                                            <small> 1 комн. </small>
+                                        </div>
+                                        <div class="m-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                 fill="currentColor"
+                                                 class="bi bi-people text-primary"
+                                                 viewBox="0 0 16 16">
+                                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                            </svg>
+                                            <small> до 2 мест. </small>
+                                        </div>
+                                    </div>
+                                    <div>Cвободных номеров: 5</div>
+                                    <a href="category.html" class="btn btn-link mt-3" style="position: relative;">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between bg-secondary bg-opacity-75 text-white">
+                                <h5 class="card-title">
+                                    Данные гостя №1
+                                </h5>
+                                <button type="button" class="btn-close btn-close-white" aria-label="Close"
+                                        disabled></button>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="form-outline mb-4 col-4">
+                                        <label class="form-label">Фамилия</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-outline mb-4 col-4">
+                                        <label class="form-label">Имя*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-outline mb-4 col-4">
+                                        <label class="form-label">Отчество</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label">Дата рождения*</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label class="form-label">Пол*</label>
+                                        <div class="d-flex flex-row border p-1">
+                                            <div class="form-check mx-2">
+                                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                                       id="" value="option1" checked>
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                    мужской
+                                                </label>
+                                            </div>
+                                            <div class="form-check mx-2">
+                                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                                       id=" " value="option2">
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                    женский
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <label class="form-label">Документ, удостоверяющий личность*</label>
+                                    <div class="input-group mb-3">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected disabled value="">Выбор типа документа</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <input type="text" class="form-control" placeholder="Номер документа">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-outline-primary small">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            <path fill-rule="evenodd"
+                                  d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        Добавить гостя
+                    </button>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6 mb-3">
+                        <div class="form-outline mb-2">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="form-outline mb-2">
+                            <label class="form-label">Телефон</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label">Город</label>
+                    <input type="text" class="form-control">
+                </div>
+                <a href="booking.html" class="btn btn-success mt-4">Бронировать</a>
+            </form>
+        </section>
+    </div>
+</div>
+</body>
+</html>

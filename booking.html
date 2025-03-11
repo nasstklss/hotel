@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Бронирование</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+<div id="app">
+    <header class="bg-primary text-white">
+        <div class="container d-flex justify-content-between py-2">
+            <a href="index.html" class="navbar-brand text-white">
+                <strong>HOTEL</strong>
+            </a>
+            <nav class="nav nav-pills">
+                <a href="index.html" class="nav-link text-white">Главная</a>
+                <a href="login.html" class="nav-link text-white">Вход</a>
+                <a href="login.html" class="nav-link text-white">Выход</a>
+            </nav>
+            <form class="d-flex my-2">
+                <div class="input-group ">
+                    <input class="form-control " type="search" placeholder="Поиск заявки по коду"
+                           aria-label="Search">
+                    <div class="input-group-append">
+                        <a href="booking.html" class="btn btn-outline-light" type="submit">Найти</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <div class="container w-50 border bg-light mt-5">
+        <section class="p-5">
+            <div class="d-flex justify-content-between">
+                <h2>Заявка на бронирование номера</h2>
+                <div class="badge bg-primary"><h2>h564kl7</h2></div>
+            </div>
+            <div class="my-2">
+                <b>Категория номера:</b> Двухместный
+            </div>
+            <div class="my-2">
+                <b>Email:</b> login@domain.com
+            </div>
+            <div class="my-2">
+                <b>Телефон:</b> 89627451245
+            </div>
+            <div class="my-2">
+                <b>Город:</b> Москва
+            </div>
+            <div class="row mt-4">
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between bg-secondary bg-opacity-75 text-white">
+                            <h5 class="card-title">
+                                Гость №1
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div><b>ФИО: </b>Иванов Иван Иванович</div>
+                            <div><b>Дата рождения: </b>12.06.1990</div>
+                            <div><b>Пол: </b>м</div>
+                            <div><b>Тип документа: </b>Паспорт гражданина РФ</div>
+                            <div><b>Номер документа: </b>123456789</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between bg-secondary bg-opacity-75 text-white">
+                            <h5 class="card-title">
+                                Гость №2
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div><b>ФИО: </b>Смирнова Наталья Петровна</div>
+                            <div><b>Дата рождения: </b>22.02.1991</div>
+                            <div><b>Пол: </b>ж</div>
+                            <div><b>Тип документа: </b>Паспорт гражданина РФ</div>
+                            <div><b>Номер документа: </b>987654321</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <form>
+                    <label class="form-label"><b>Статус заявки: </b></label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected disabled value="" aria-disabled="true">Статус заявки</option>
+                        <option value="1">Ожидание</option>
+                        <option value="2">Согласована</option>
+                        <option value="3">Отлонена</option>
+                    </select>
+                    <a href="manage.html" class="btn btn-success mt-4">Сохранить</a>
+            </form>
+        </section>
+    </div>
+</div>
+</body>
+</html>

@@ -27,15 +27,7 @@
                     <nav class="nav nav-pills">
                         <a @click="openPage('main')" class="nav-link text-white">Главная</a>
                         <a @click="openPage('login')" class="nav-link text-white">Вход</a>
-                        <a @click="logout" class="nav-link text-white">Выход</a>
-                        <!-- <a @click="openPage('addBooking')" class="nav-link text-white">Бронирование номера</a>
-                        <a @click="openPage('addPrice')" class="nav-link text-white">Добавление прайса</a>
-                        <a @click="openPage('bookingApplication')" class="nav-link text-white">Заявка на бронирование
-                            номера</a>
-                        <a @click="openPage('сategoriesName')" class="nav-link text-white">Название категории номера</a>
-                        <a @click="openPage('control')" class="nav-link text-white">Управление заявками на
-                            бронирование</a> -->
-                        
+                        <a @click="logout" class="nav-link text-white">Выход</a>                        
                     </nav>
                     <form class="my-2">
                         <div class="input-group">
@@ -459,21 +451,6 @@
                         </p>
                         <div class="border bg-light" v-for="elem in categoryOne.data.service_icons">
                             <div class="m-3 d-flex">
-                                <!-- <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                    style="enable-background:new 0 0 512 512" xml:space="preserve">
-                                    <path style="fill:#bfa993"
-                                        d="M456.092 226.575H55.908V108.874c0-19.501 15.808-35.31 35.31-35.31h329.563c19.502 0 35.31 15.81 35.31 35.31v117.701z" />
-                                    <path style="fill:#b29a7e"
-                                        d="M420.782 73.563h-70.621c19.502 0 35.31 15.808 35.31 35.31v117.701h70.621v-117.7c0-19.502-15.808-35.311-35.31-35.311z" />
-                                    <path style="fill:#bfa993" d="M8.828 320.736h47.08v117.701H8.828z" />
-                                    <path style="fill:#b29a7e" d="M456.092 320.736h47.08v117.701h-47.08z" />
-                                    <path style="fill:#ededed" d="M126.529 132.414h258.943v94.161H126.529z" />
-                                    <path style="fill:#d8d8da" d="M338.391 132.414h47.08v94.161h-47.08z" />
-                                    <path style="fill:#98c8ed" d="M8.828 226.575h494.345v117.701H8.828z" />
-                                    <path style="fill:#7ab9e8" d="M456.092 226.575h47.08v117.701h-47.08z" />
-                                    <path style="fill:#2e2d31"
-                                        d="M503.172 217.747H464.92v-61.793c0-4.875-3.951-8.828-8.828-8.828s-8.828 3.952-8.828 8.828v61.793h-52.966v-85.333a8.827 8.827 0 0 0-8.828-8.828H126.529a8.828 8.828 0 0 0-8.828 8.828v85.333H64.736V108.874c0-14.603 11.88-26.483 26.483-26.483h329.563c14.602 0 26.483 11.88 26.483 26.483 0 4.875 3.951 8.828 8.828 8.828s8.828-3.952 8.828-8.828c0-24.338-19.8-44.138-44.138-44.138H91.218c-24.338 0-44.138 19.8-44.138 44.138v108.874H8.828a8.828 8.828 0 0 0 0 17.655h485.517v100.046H17.655v-61.793A8.828 8.828 0 0 0 0 273.655v164.782a8.828 8.828 0 0 0 8.828 8.828h47.08a8.828 8.828 0 0 0 8.828-8.828v-85.333h382.529v85.333a8.827 8.827 0 0 0 8.828 8.828h47.08a8.827 8.827 0 0 0 8.828-8.828V226.575a8.829 8.829 0 0 0-8.829-8.828zm-367.816 0v-76.506h241.287v76.506H135.356zM47.08 429.609H17.655v-76.506H47.08v76.506zm447.265 0H464.92v-76.506h29.425v76.506z" />
-                                </svg> -->
                                 <div style="margin-right: 20px" v-html="elem.code"></div>
                                 {{elem.name}}
                             </div>

@@ -99,13 +99,9 @@ const app = Vue.createApp({
             const myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Authorization", `Bearer ${this.user_token}`);
-
-            // const raw = "";
-
             const requestOptions = {
                 method: "GET",
                 headers: myHeaders,
-                // body: raw,
                 redirect: "follow"
             };
 
@@ -133,7 +129,6 @@ const app = Vue.createApp({
             fetch(`${host}/booking`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
-                    // console.table(result);
                     this.controlForm.controlApplications = result;
                 })
                 .catch((error) => console.error(error));
@@ -152,7 +147,6 @@ const app = Vue.createApp({
             fetch(`${host}/user`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
-                    // console.log(result);
                     this.controlForm.controlManager = result;
                 })
                 .catch((error) => console.error(error));
@@ -172,7 +166,6 @@ const app = Vue.createApp({
             fetch(`${host}/price`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
-                    // console.log(result);
                     this.controlForm.controlPrice = result;
                 })
                 .catch((error) => console.error(error));
@@ -181,7 +174,6 @@ const app = Vue.createApp({
         // Добавление менеджера
         addManager() {
             const myHeaders = new Headers();
-            // myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Authorization", `Bearer ${this.user_token}`);
 
             const formdata = new FormData();
@@ -202,7 +194,6 @@ const app = Vue.createApp({
             fetch(`${host}/user`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
-                    // console.log(result);
 
                     this.addManagerForm = {
                         name: null,
@@ -225,12 +216,9 @@ const app = Vue.createApp({
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Authorization", `Bearer ${this.user_token}`);
 
-            // const raw = ""; | без этих срок работает
-
             const requestOptions = {
                 method: "GET",
                 headers: myHeaders,
-                // body: raw, | без этих строк работает
                 redirect: "follow"
             };
 
@@ -240,7 +228,6 @@ const app = Vue.createApp({
                     console.log(result);
 
                     this.controlManagerFunc();
-                    // this.openPage('control');
                 })
                 .catch((error) => console.error(error));
         },
@@ -250,12 +237,9 @@ const app = Vue.createApp({
             const myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
 
-            // const raw = "";
-
             const requestOptions = {
                 method: "GET",
                 headers: myHeaders,
-                // body: raw,
                 redirect: "follow"
             };
 
@@ -306,7 +290,6 @@ const app = Vue.createApp({
             fetch(`${host}/booking`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
-                    // console.log(result);
 
                     this.bookingCreateForm = {
                         arr_date: null,
@@ -347,7 +330,6 @@ const app = Vue.createApp({
             fetch(`${host}/category`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
-                    // console.log(result);
                     this.category = result;
                 })
                 .catch((error) => console.error(error));
@@ -367,7 +349,6 @@ const app = Vue.createApp({
             fetch(`${host}/category/${id}`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
-                    // console.log(result);
                     this.categoryOne = result;
                     this.openPage('сategoriesName');
                 })
@@ -451,7 +432,6 @@ const app = Vue.createApp({
             fetch(`${host}/price`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
-                    // console.log(result);
 
                     this.createPriceForm = {
                         room_category_id: null,
